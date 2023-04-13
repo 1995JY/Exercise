@@ -5,6 +5,7 @@ public class 在排序数组中查找元素的第一个和最后一个位置 {
         int[] arr = {2, 3, 4, 5, 6, 6, 8, 8, 8, 9};
         int target = 8;
         System.out.println(binarySearch(arr, 8));
+        sout  ad
 
     }
 
