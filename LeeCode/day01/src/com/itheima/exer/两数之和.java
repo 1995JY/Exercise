@@ -19,8 +19,8 @@ import java.util.HashMap;
 public class 两数之和 {
     public static void main(String[] args) {
         int[] nums={2,7,11,15};
-        int target=9;
-        System.out.println(findNumber(nums, target));
+        int targe=9;
+        System.out.println(findNumber(nums, targe));
 
 //sb wjy
     }
