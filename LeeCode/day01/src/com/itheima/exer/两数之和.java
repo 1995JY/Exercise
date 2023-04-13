@@ -23,6 +23,8 @@ public class 两数之和 {
         System.out.println(findNumber(nums, target));
 
 //sb wjy
+//sb wjy
+//sb wjy
     }
     public static String findNumber(int[] nums, int target){
         int[] index=new int[2];
