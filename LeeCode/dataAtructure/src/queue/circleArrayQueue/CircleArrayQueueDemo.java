@@ -108,6 +108,9 @@ class CircleQueue {
 
     //    获取队列头
     public int GetQueueHead() {
+        if(isEmpty()){
+            throw new RuntimeException("队列为空");
+        }
         front = (front + 1) % maxSize;
         return arr[front];
     }
