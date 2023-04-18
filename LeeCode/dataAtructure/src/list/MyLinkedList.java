@@ -83,6 +83,7 @@ public class MyLinkedList {
         else{
             Node node1=head;
             Node node2=head;
+
             while(index-1>0){
                 node1=node1.next;
                 index--;

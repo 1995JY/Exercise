@@ -9,7 +9,12 @@ public class Main {
         node2.next=node3;
         Node node4=new Node(8);
         node3.next=node4;
+        Node node5=new Node(15);
+        node5.next=head;
 
+        Node temp=head;
+        head=node5;
+        node5=temp;
         //----------
         int result1 = lastk(head,3);
 
@@ -48,7 +53,6 @@ public class Main {
         }
         return node.val;
     }
-
     public static int lastk(Node node,int last_k){
         int fast=1;
         int slow=1;
