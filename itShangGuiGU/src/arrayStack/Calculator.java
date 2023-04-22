@@ -2,18 +2,63 @@ package arrayStack;
 
 public class Calculator {
     public static void main(String[] args) {
+        String str="1-2-3-4";
+        ArrayStack2 numStack=new ArrayStack2(10);
+        ArrayStack2 operStack=new ArrayStack2(10);
+        int index=0;
+        int num1=0;
+        int num2=0;
+        int oper=0;
+        int result=0;
+        char ch=' ';
+
+        for (int i = 0; i < str.length(); i++) {
+             ch = str.charAt(i);
+//             判断是数字还是运算符，运算符压入运算符栈
+             if(numStack.isOper(ch)){
+//                 判断是否栈空，栈空直接压入
+                 if(operStack.isEmpty()){
+                     operStack.push(ch);
+                 } else{// 否则判断运算符优先级，优先级高直接压入，优先级低，先运算，再压入
+                     if(operStack.priority(ch)>=operStack.priority(operStack.checkTop())){
+                         operStack.push(ch);
+                     }else{
+                         num1=numStack.pop();
+                         num2=numStack.pop();
+                         oper=operStack.pop();
+                         result=numStack.cal(num1,num2,oper);
+                         numStack.push(result);
+                         operStack.push(ch);
+                     }
+                 }
+
+             }else{ // 否则压入数字栈
+                 numStack.push(ch-48);
+             }
+        }
+        while(true){
+            num1=numStack.pop();
+            num2=numStack.pop();
+            oper=operStack.pop();
+            result=numStack.cal(num1,num2,oper);
+            numStack.push(result);
+            if(operStack.isEmpty()){
+                break;
+            }
+        }
+        System.out.println("result="+result);
 
     }
 }
 class ArrayStack2{
     private int maxSize;
-    private double[] stack;
+    private int[] stack;
     //    表示栈顶，初始值为-1；
     private int top=-1;
 
     public ArrayStack2(int maxSize) {
         this.maxSize = maxSize;
-        stack=new double[this.maxSize];
+        stack=new int[this.maxSize];
     }
     public boolean isFull(){
         return top==this.maxSize-1;
@@ -29,11 +74,14 @@ class ArrayStack2{
         top++;
         this.stack[top]=num;
     }
-    public double pop(){
+    public int checkTop(){
+        return stack[top];
+    }
+    public int pop(){
         if(isEmpty()){
             new RuntimeException("栈空，没有数据");
         }
-        double num=stack[top];
+        int num=stack[top];
         top--;
         return num;
     }
@@ -63,14 +111,14 @@ class ArrayStack2{
     }
 
 //   计算方法
-    public double cal(int num1,int num2,char val){
-        double res=0;
+    public int cal(int num1,int num2,int val){
+        int res=0;
         switch (val){
             case '*':
                 res = num1 * num2;
                 break;
             case '/':
-                res = num2 * 1.0 / num1;
+                res = num2  / num1;
                 break;
             case '+':
                 res = num1 + num2;
