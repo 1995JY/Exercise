@@ -1,4 +1,6 @@
 package arrayStack;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PolandNotation {
     public static void main(String[] args) {
@@ -13,11 +15,34 @@ public class PolandNotation {
 * 5.按照后缀表达式的计算规则，计算结果：定义方法，返回结果
 * */
         String str="1+（（2+3）*4）-5";
+        List<String> stringList = transferString(str);
+        System.out.println(stringList);
+
+
 
 
     }
+// 将中缀表达式，存储进list集合
+    private static List<String> transferString(String str) {
+        List<String> list=new ArrayList<>();
+        for (int i = 0; i < str.length(); i++) {
+            String str1="";
+           if( str.charAt(i)>=48 && str.charAt(i)<=57){
+               while(i< str.length() && (str.charAt(i)+"").matches("\\d")){
+                   str1+= str.charAt(i);
+                   i++;
+               }
+               list.add(str1);
+               i--;
+           }else{
+               str1+= str.charAt(i);
+               list.add(str1);
+           }
+        }
+        return list;
+    }
 
-//    初级计算器代码实现，有重大漏洞。
+    //    初级计算器代码实现，有重大漏洞。
 //    计算代码
 //    String str="1-2-3-4";
 //    int reslut = calculator(str);
