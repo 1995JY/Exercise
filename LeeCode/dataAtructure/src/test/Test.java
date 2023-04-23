@@ -17,5 +17,11 @@ public class Test {
         System.out.println(B);
         System.out.println(C);
 
+//        String str1="abc";
+//        char a=str1.charAt(0);
+//        char b=str1.charAt(1);
+//        char c=str1.charAt(2);
+//        String str2=a+b+c;
+//        System.out.println(str1.equals(str2));
     }
 }
