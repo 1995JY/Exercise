@@ -13,8 +13,8 @@ public class BinaryTreeDemo {
         node3.setRight(node5);
         BinaryTree bt=new BinaryTree(head);
 //        bt.foreOrder();
-        bt.infixOrder();
-//        bt.postOrder();
+//        bt.infixOrder();
+        bt.postOrder();
 
     }
 }
