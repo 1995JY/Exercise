@@ -18,8 +18,8 @@ import java.util.HashMap;
  */
 public class addTweNumber {
     public static void main(String[] args) {
-        int[] nums={2,7,11,15};
-        int targe=9;
+        int[] nums = {2, 7, 11, 15};
+        int targe = 9;
         System.out.println(findNumber(nums, targe));
 
 //sb wjy

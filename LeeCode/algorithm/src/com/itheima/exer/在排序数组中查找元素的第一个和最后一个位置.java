@@ -20,9 +20,9 @@ public class 在排序数组中查找元素的第一个和最后一个位置 {
         while (min <= max) {
             mid = (max + min) / 2;
             if (target > arr[mid]) {
-                min = mid+1;
+                min = mid + 1;
             } else if (target < arr[mid]) {
-                max = mid-1;
+                max = mid - 1;
             } else {
                 index = mid;
                 break;
@@ -30,13 +30,13 @@ public class 在排序数组中查找元素的第一个和最后一个位置 {
         }
         int maxIndex = index;
         int minIndex = index;
-        while(arr[minIndex]==arr[minIndex-1]){
+        while (arr[minIndex] == arr[minIndex - 1]) {
             minIndex--;
         }
-        while(arr[maxIndex]==arr[maxIndex+1]){
+        while (arr[maxIndex] == arr[maxIndex + 1]) {
             maxIndex++;
         }
-        return "["+minIndex+","+maxIndex+"]";
+        return "[" + minIndex + "," + maxIndex + "]";
     }
 
 }

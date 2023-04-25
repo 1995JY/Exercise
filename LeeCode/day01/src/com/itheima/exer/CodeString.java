@@ -21,7 +21,7 @@ public class CodeString {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("请输入一串字符（要求全是字母或者数字组成，不分大小写）：");
-        String s=sc.nextLine();
+        String s = sc.nextLine();
 
         System.out.println(encryption(s));
         System.out.println(decryption(s));
