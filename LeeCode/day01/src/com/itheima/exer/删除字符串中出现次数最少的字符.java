@@ -19,13 +19,13 @@ public class 删除字符串中出现次数最少的字符 {
         int[] arr2=new int[arr1.length];
         //统计各元素出现的次数，并将次数依次封装到arr2里
         for (int i = 0; i < arr1.length; i++) {
-            int num=0;
-           for(int j=0;j<arr1.length;j++) {
-               if(arr1[i]==arr1[j]){
-                   num++;
-               }
-           }
-           arr2[i]=num;
+            int num = 0;
+            for (int j = 0; j < arr1.length; j++) {
+                if (arr1[i] == arr1[j]) {
+                    num++;
+                }
+            }
+            arr2[i] = num;
         }
         //遍历arr2的最小值，最小值的索引便是出现次数最小的字符的索引,将索引依次封装进list2的集合里。
         int min=0;

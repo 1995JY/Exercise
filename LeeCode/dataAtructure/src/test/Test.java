@@ -1,7 +1,5 @@
 package test;
 
-import java.util.TreeSet;
-
 public class Test {
     public static void main(String[] args) {
         Student A=new Student("张三",23);
@@ -10,8 +8,8 @@ public class Test {
         System.out.println(A);
         System.out.println(B);
         System.out.println(C);
-        B=C;
-        A=B;
+        B = C;
+        A = B;
         System.out.println("-----------");
         System.out.println(A);
         System.out.println(B);

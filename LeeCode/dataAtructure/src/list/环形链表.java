@@ -13,24 +13,26 @@ public class 环形链表 {
     public static void main(String[] args) {
         Node head = new Node(0);
         Node node2 = new Node(1);
-        head.next=node2;
-        Node node3=new Node(5);
-        node2.next=node3;
-        Node node4=new Node(8);
-        node3.next=node4;
+        head.next = node2;
+        Node node3 = new Node(5);
+        node2.next = node3;
+        Node node4 = new Node(8);
+        node3.next = node4;
         System.out.println(hasSycle(head));
     }
-    public static boolean hasSycle(Node head){
-        HashSet<Node> hs=new HashSet<>();
-        while(head!=null){
-            if(!hs.add(head)){
+
+    public static boolean hasSycle(Node head) {
+        HashSet<Node> hs = new HashSet<>();
+        while (head != null) {
+            if (!hs.add(head)) {
                 return true;
             }
-            head=head.next;
+            head = head.next;
         }
         return false;
     }
 }
+
 class Node {
     int val;
     Node next;
