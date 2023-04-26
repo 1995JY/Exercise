@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd911dc-d191-486e-b833-b9911931b949" name="Changes" comment="">
+    <list default="true" id="9cd911dc-d191-486e-b833-b9911931b949" name="Changes" comment="二叉树前序查找">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeeCode/day01/src/com/itheima/exer/CodeString.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeeCode/day01/src/com/itheima/exer/CodeString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeeCode/day01/src/com/itheima/exer/两数相加.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeeCode/day01/src/com/itheima/exer/删除字符串中出现次数最少的字符.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeeCode/day01/src/com/itheima/exer/无重复字符的最长子串.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/itShangGuiGU/src/binaryTree/BinaryTreeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/itShangGuiGU/src/binaryTree/BinaryTreeDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +48,19 @@
       <option name="presentableId" value="Default" />
       <updated>1682486982927</updated>
       <workItem from="1682486985675" duration="93000" />
-      <workItem from="1682487104978" duration="3631000" />
+      <workItem from="1682487104978" duration="3792000" />
+      <workItem from="1682496554730" duration="149000" />
+      <workItem from="1682502120216" duration="62000" />
+      <workItem from="1682502784339" duration="48000" />
     </task>
+    <task id="LOCAL-00001" summary="二叉树前序查找">
+      <created>1682496402414</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682496402414</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,5 +76,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="二叉树前序查找" />
+    <option name="LAST_COMMIT_MESSAGE" value="二叉树前序查找" />
   </component>
 </project>
