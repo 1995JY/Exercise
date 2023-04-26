@@ -17,7 +17,7 @@ import java.util.Scanner;
 数据范围：输入的两个字符串长度满足 1 \le n \le 1000 \1≤n≤1000  ，保证输入的字符串都是只由大小写字母或者数字组成
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
  */
-public class CodeString {
+public class codeString {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("请输入一串字符（要求全是字母或者数字组成，不分大小写）：");

@@ -53,6 +53,7 @@ class BinaryTree {
         }
     }
 
+
 }
 // 节点
 class Node{
@@ -166,6 +167,26 @@ class Node{
             this.right.postOrder();
         }
         System.out.println(this);
+    }
+
+    public Node foreOrderSerach(int no){
+        if(this.no==no){
+            return this;
+        }
+        Node result=null;
+        if(this.left!=null){
+           result= this.left.foreOrderSerach(no);
+        }
+        if(result!=null){
+            return result;
+        }
+        if(this.right!=null){
+            result=this.right.foreOrderSerach(no);
+        }
+        if(result!=null){
+            return result;
+        }
+        return result;
     }
 }
 
