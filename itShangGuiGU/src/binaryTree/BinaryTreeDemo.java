@@ -12,9 +12,15 @@ public class BinaryTreeDemo {
         node3.setLeft(node4);
         node3.setRight(node5);
         BinaryTree bt=new BinaryTree(head);
-//        bt.foreOrder();
-//        bt.infixOrder();
+
         bt.postOrder();
+        bt.delNode(3);
+        System.out.println("--------");
+        bt.postOrder();
+//        bt.infixOrder();
+//        bt.postOrder();
+//        Node node = bt.foreOrderSearch(4);
+//        System.out.println(node.getName());
 
     }
 }
@@ -50,6 +56,43 @@ class BinaryTree {
             System.out.println("二叉树为空");
         } else {
             head.postOrder();
+        }
+    }
+
+//    前序遍历查找
+    public Node foreOrderSearch(int no){
+        if(head!=null){
+            return this.head.foreOrderSerach(no);
+        }else{
+            return null;
+        }
+    }
+    //    中序遍历查找
+    public Node infixOrderSearch(int no){
+        if(head!=null){
+            return this.head.infixOrderSearch(no);
+        }else{
+            return null;
+        }
+    }
+    //    后序遍历查找
+    public Node postOrderSearch(int no){
+        if(head!=null){
+            return this.head.postOrderSearch(no);
+        }else{
+            return null;
+        }
+    }
+    //    删除节点
+    /**
+     * 删除节点（约定，如果删除的节点是叶节点，就直接删除该节点 如果该节点不是叶结点，就直接删除该分支）
+     * @param no
+     */
+    public void delNode(int no){
+        if(this.head==null || this.head.getNo()==no){
+            this.head=null;
+        }else {
+            this.head.delNode(no);
         }
     }
 
@@ -138,6 +181,28 @@ class Node{
     public String toString() {
         return "Node{no = " + no + ", name = " + name + "}";
     }
+
+    /**
+     * 删除节点
+     * @param no
+     */
+    public void delNode(int no){
+        if( this.left!=null && this.left.no==no){
+            this.left=null;
+            return;
+        }
+        if(this.right !=null && this.right.no==no){
+            this.right=null;
+            return;
+        }
+        if(this.left!=null){
+            this.left.delNode(no);
+        }
+
+        if(this.right!=null){
+            this.right.delNode(no);
+        }
+    }
 //    前序遍历
     public void foreOrder(){
         System.out.println(this);
@@ -169,6 +234,11 @@ class Node{
         System.out.println(this);
     }
 
+    /**
+     * 前序遍历查找
+     * @param no
+     * @return
+     */
     public Node foreOrderSerach(int no){
         if(this.no==no){
             return this;
@@ -186,7 +256,60 @@ class Node{
         if(result!=null){
             return result;
         }
+        System.out.println(this.no);
         return result;
+    }
+
+    /**
+     * 中序遍历查找
+     * @param no
+     * @return
+     */
+    public Node infixOrderSearch(int no){
+        Node result=null;
+        if(this.left!=null){
+            result=this.left.infixOrderSearch(no);
+        }
+        if(result!=null){
+            return result;
+        }
+        if(this.no==no){
+            return this;
+        }
+        if(this.right!=null){
+            result=this.right.infixOrderSearch(no);
+        }
+        if (result!=null){
+            return result;
+        }
+        System.out.println(this.no);
+        return null;
+    }
+
+    /**
+     * 后续遍历查找
+     * @param no
+     * @return
+     */
+    public Node postOrderSearch(int no){
+        Node result=null;
+        if(this.left!=null){
+            result=this.left.infixOrderSearch(no);
+        }
+        if(result!=null){
+            return result;
+        }
+        if(this.right!=null){
+            result=this.right.infixOrderSearch(no);
+        }
+        if (result!=null){
+            return result;
+        }
+        if(this.no==no){
+            return this;
+        }
+        System.out.println(this.no);
+        return null;
     }
 }
 
