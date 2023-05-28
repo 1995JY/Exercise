@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cd911dc-d191-486e-b833-b9911931b949" name="Changes" comment="二叉树的遍历查找">
-      <change afterPath="$PROJECT_DIR$/LeeCode/dataAtructure/src/test/StudentUnion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/itShangGuiGU/src/BinarySortTree/BinarySortTreeDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/itShangGuiGU/src/ThreadedBinaryTree/ThreadedBinaryTreeDemo.java" afterDir="false" />
+    <list default="true" id="9cd911dc-d191-486e-b833-b9911931b949" name="Changes" comment="线索二叉树和bts">
+      <change afterPath="$PROJECT_DIR$/itShangGuiGU/src/AVLTree/AVLTreeDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LeeCode/dataAtructure/src/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeeCode/dataAtructure/src/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itShangGuiGU/src/BinarySortTree/BinarySortTreeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/itShangGuiGU/src/BinarySortTree/BinarySortTreeDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itShangGuiGU/src/binaryTree/BinaryTreeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/itShangGuiGU/src/binaryTree/BinaryTreeDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -49,7 +57,25 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.BinarySortTreeDemo">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="AVLTree" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.AVLTreeDemo">
+    <configuration name="AVLTreeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AVLTree.AVLTreeDemo" />
+      <module name="itShangGuiGU" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AVLTree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BinarySortTreeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BinarySortTree.BinarySortTreeDemo" />
       <module name="itShangGuiGU" />
@@ -91,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AVLTreeDemo" />
         <item itemvalue="Application.BinarySortTreeDemo" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.BinaryTreeDemo" />
@@ -110,7 +137,8 @@
       <workItem from="1682496554730" duration="149000" />
       <workItem from="1682502120216" duration="62000" />
       <workItem from="1682502784339" duration="100000" />
-      <workItem from="1685105308827" duration="23072000" />
+      <workItem from="1685105308827" duration="23131000" />
+      <workItem from="1685255865272" duration="18533000" />
     </task>
     <task id="LOCAL-00001" summary="二叉树前序查找">
       <created>1682496402414</created>
@@ -133,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685112638738</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="线索二叉树和bts">
+      <created>1685198999437</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685198999437</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +189,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="二叉树前序查找" />
     <MESSAGE value="二叉树的遍历查找" />
-    <option name="LAST_COMMIT_MESSAGE" value="二叉树的遍历查找" />
+    <MESSAGE value="线索二叉树和bts" />
+    <option name="LAST_COMMIT_MESSAGE" value="线索二叉树和bts" />
   </component>
 </project>

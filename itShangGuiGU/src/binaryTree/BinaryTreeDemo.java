@@ -99,7 +99,7 @@ class BinaryTree {
 
 }
 // 节点
-class Node{
+class   Node{
     private int no;
     private String name;
     private Node left;
