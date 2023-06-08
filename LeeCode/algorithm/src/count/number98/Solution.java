@@ -5,7 +5,7 @@ public class Solution {
     Long pre=Long.MIN_VALUE;
     public boolean isValidBST(TreeNode root) {
         if(root==null){
-            return false;
+            return true;
         }
 
         if(!isValidBST(root.left)){

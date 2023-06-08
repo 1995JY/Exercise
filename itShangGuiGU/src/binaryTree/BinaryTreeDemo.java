@@ -1,5 +1,7 @@
 package binaryTree;
 
+import java.util.*;
+
 public class BinaryTreeDemo {
     public static void main(String[] args) {
         Node head=new Node(1,"宋江");
@@ -13,12 +15,15 @@ public class BinaryTreeDemo {
         node3.setRight(node5);
         BinaryTree bt=new BinaryTree(head);
 
-        bt.postOrder();
-        bt.delNode(3);
-        System.out.println("--------");
-        bt.postOrder();
+
+//        bt.foreOrder();
 //        bt.infixOrder();
-//        bt.postOrder();
+        bt.postOrder();
+        System.out.println("----------------");
+        List<Node> nodes = bt.iteratePostOrder();
+        for (Node node : nodes) {
+            System.out.println(node);
+        }
 //        Node node = bt.foreOrderSearch(4);
 //        System.out.println(node.getName());
 
@@ -83,6 +88,82 @@ class BinaryTree {
             return null;
         }
     }
+
+    //迭代法前序遍历
+    public List<Node> iterateForeOrder(){
+        List<Node> list=new ArrayList<>();
+        Stack<Node> stack = new Stack<>();
+        if(head==null){
+            return list;
+        }
+        stack.push(head);
+        while(!stack.isEmpty()){
+            Node node = stack.pop();
+            list.add(node);
+            if(node.getRight()!=null){
+                stack.push(node.getRight());
+            }
+            if(node.getLeft()!=null){
+                stack.push(node.getLeft());
+            }
+        }
+        return list;
+    }
+    //迭代法中序遍历
+    public List<Node> iterateInfixOrder() {
+        List<Node> list = new ArrayList<>();
+        Stack<Node> stack = new Stack<>();
+        while (!stack.isEmpty() || head != null){
+            if(head!=null){
+                stack.push(head);
+                head=head.getLeft();
+            }else{
+                Node temp = stack.pop();
+                list.add(temp);
+                head=temp.getRight();
+            }
+        }
+        return list;
+
+    }
+    // 迭代法的后序遍历
+    public List<Node> iteratePostOrder() {
+        List<Node> list = new ArrayList<>();
+        Stack<Node> stack = new Stack<>();
+
+        while(head != null || (!stack.empty())){
+            if(head != null){
+                stack.push(head);
+                list.add(0,head);
+                head = head.getRight();
+            }else{//右子树为空
+               Node temp = stack.pop();
+                head = temp.getLeft();
+            }
+        }
+        return list;
+    }
+    // 二叉树的层序遍历迭代
+    public List<Node> iterateOrderByFloor(){
+        List<Node> list = new ArrayList<>();
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(head);
+        while (!queue.isEmpty()){
+            Node node = queue.poll();
+            list.add(node);
+            if(node.getLeft()!=null){
+                queue.add(node.getLeft());
+            }
+            if(node.getRight()!=null){
+                queue.add(node.getRight());
+            }
+        }
+
+
+        return list;
+    }
+
+
     //    删除节点
     /**
      * 删除节点（约定，如果删除的节点是叶节点，就直接删除该节点 如果该节点不是叶结点，就直接删除该分支）

@@ -7,7 +7,18 @@ package count.Number99;
  */
 class Solution {
     public void recoverTree(TreeNode root) {
+        TreeNode before;
+        TreeNode after;
+        if(root.left!=null){
 
+        }
+
+    }
+
+    public void infixOrder(TreeNode root){
+        if(root.left!=null){
+            infixOrder(root.left);
+        }
 
     }
 }
